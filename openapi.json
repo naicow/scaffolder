@@ -904,6 +904,22 @@
             }
           },
           {
+            "name": "category",
+            "required": false,
+            "in": "query",
+            "description": "Filtro por categoria",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "WORK",
+                "STUDY",
+                "PERSONAL",
+                "HEALTH",
+                "OTHER"
+              ]
+            }
+          },
+          {
             "name": "sortBy",
             "required": false,
             "in": "query",
@@ -1515,6 +1531,18 @@
             ],
             "default": "MEDIUM"
           },
+          "category": {
+            "type": "string",
+            "description": "Categoria da tarefa",
+            "enum": [
+              "WORK",
+              "STUDY",
+              "PERSONAL",
+              "HEALTH",
+              "OTHER"
+            ],
+            "default": "OTHER"
+          },
           "dueDate": {
             "type": "string",
             "description": "Data de entrega limite (ISO 8601)",
@@ -1579,6 +1607,18 @@
             ],
             "example": "PENDING"
           },
+          "category": {
+            "type": "string",
+            "description": "Categoria da tarefa",
+            "enum": [
+              "WORK",
+              "STUDY",
+              "PERSONAL",
+              "HEALTH",
+              "OTHER"
+            ],
+            "example": "OTHER"
+          },
           "priority": {
             "type": "string",
             "description": "Prioridade da tarefa",
@@ -1621,6 +1661,7 @@
           "id",
           "title",
           "status",
+          "category",
           "priority",
           "ownerId",
           "createdAt",
@@ -1684,6 +1725,17 @@
               "MEDIUM",
               "HIGH",
               "URGENT"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "description": "Categoria da tarefa",
+            "enum": [
+              "WORK",
+              "STUDY",
+              "PERSONAL",
+              "HEALTH",
+              "OTHER"
             ]
           },
           "dueDate": {
