@@ -28,7 +28,7 @@ describe('LoginPage', () => {
       </ThemeProvider>,
     );
 
-    expect(screen.getByText('AppStart')).toBeInTheDocument();
+    expect(screen.getByText('Todocategorias')).toBeInTheDocument();
     expect(screen.getByText('Entrar na Conta')).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/admin@appstart.local/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/Sua senha secreta/i)).toBeInTheDocument();
